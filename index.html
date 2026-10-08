@@ -124,7 +124,6 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--primary-glow);
     }
 
-    /* Multi-line Big Hero Title */
     .hero-title {
       font-size: 25px;
       font-weight: 800;
@@ -203,7 +202,7 @@
       border-radius: 50%;
     }
 
-    /* How to Use Preview Slider */
+    /* Preview Slider */
     .app-gallery-section {
       width: 100%;
       max-width: 1000px;
@@ -246,41 +245,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .video-card {
-      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 8px;
-    }
-
-    .play-btn-circle {
-      width: 42px;
-      height: 42px;
-      background: rgba(59, 130, 246, 0.9);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
-      margin-bottom: 8px;
-      border: 2px solid #ffffff;
-    }
-
-    .play-btn-circle svg {
-      fill: #ffffff;
-      margin-left: 2px;
-    }
-
-    .video-label {
-      color: #ffffff;
-      font-size: 11.5px;
-      font-weight: 700;
-      line-height: 1.2;
     }
 
     /* Main Container & Permissions Steps */
@@ -395,7 +359,6 @@
       font-weight: 700;
     }
 
-    /* Vertical Mobile Screen Box Aspect Ratio (9:16) */
     .step-img-container {
       width: 100%;
       max-width: 220px;
@@ -431,7 +394,7 @@
       object-fit: contain;
     }
 
-    /* Fullscreen Modal View */
+    /* Modal */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -460,7 +423,7 @@
       overflow: hidden;
     }
 
-    .modal-img, .modal-video {
+    .modal-img {
       width: 100%;
       max-height: 80vh;
       object-fit: contain;
@@ -485,7 +448,6 @@
       z-index: 1001;
     }
 
-    /* Footer */
     footer {
       width: 100%;
       padding: 16px;
@@ -509,7 +471,7 @@
   <!-- Header -->
   <header>
     <a href="#" class="nav-brand">
-      <img src="logo.png" alt="Sleep Guard Logo" class="brand-logo">
+      <img src="./logo.png" alt="Sleep Guard Logo" class="brand-logo">
       <span class="brand-name">Sleep Guard</span>
     </a>
     <span class="nav-badge">v1.0 Official</span>
@@ -518,7 +480,7 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-logo-box">
-      <img src="logo.png" alt="Sleep Guard Logo" class="hero-logo">
+      <img src="./logo.png" alt="Sleep Guard Logo" class="hero-logo">
     </div>
 
     <h1 class="hero-title">
@@ -529,7 +491,7 @@
     <p class="hero-subtitle">Automatically turn off screen and stop background activity when you fall asleep at night.</p>
     
     <div class="download-area">
-      <a href="SleepGuard.apk" class="btn-download" download>
+      <a href="./SleepGuard.apk" class="btn-download" download>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="7 10 12 15 17 10"></polyline>
@@ -548,36 +510,25 @@
     </div>
   </section>
 
-  <!-- How to Use Preview Slider -->
+  <!-- Preview Slider (Only Images, Video Removed) -->
   <section class="app-gallery-section">
     <h3 class="gallery-title">How to Use Preview</h3>
     <div class="slider-container">
-      
-      <!-- Video Preview Card -->
-      <div class="slide-item video-card" onclick="openVideoModal('demo.mp4')">
-        <div class="play-btn-circle">
-          <svg width="16" height="16" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-        </div>
-        <div class="video-label">How to setup & use App</div>
-      </div>
 
-      <!-- App Screenshots -->
-      <div class="slide-item" onclick="openImageModal('app-screen1.jpg')">
-        <img src="app-screen1.jpg" alt="Sleep Guard Interface">
+      <div class="slide-item" onclick="openImageModal('https://i.ibb.co/Dx0Q676/app-screen1.jpg')">
+        <img src="https://i.ibb.co/Dx0Q676/app-screen1.jpg" alt="Open App Interface">
       </div>
-      <div class="slide-item" onclick="openImageModal('app-screen2.jpg')">
-        <img src="app-screen2.jpg" alt="Inactivity Timer Setup">
+      <div class="slide-item" onclick="openImageModal('https://i.ibb.co/0jCYSc3T/app-screen2.jpg')">
+        <img src="https://i.ibb.co/0jCYSc3T/app-screen2.jpg" alt="Select Timing Setup">
       </div>
-      <div class="slide-item" onclick="openImageModal('app-screen3.jpg')">
-        <img src="app-screen3.jpg" alt="Auto Screen Off Protection">
+      <div class="slide-item" onclick="openImageModal('https://i.ibb.co/S7VG1KHY/app-screen3.jpg')">
+        <img src="https://i.ibb.co/S7VG1KHY/app-screen3.jpg" alt="Select Enable Protection">
       </div>
 
     </div>
   </section>
 
-  <!-- Main Instructions Section -->
+  <!-- Steps Section -->
   <main class="main-container">
     <div class="section-title-wrapper">
       <div class="warning-icon-box">⚠️</div>
@@ -589,103 +540,94 @@
 
     <div class="steps-grid">
       
-      <!-- Step 1 -->
       <div class="step-card">
         <div class="step-header">
           <span class="step-number">STEP 01</span>
         </div>
         <h3 class="step-title">Allow Restricted Settings</h3>
         <p class="step-text">Open App Info ➔ Scroll down ➔ Enable <span class="highlight">'Allow restricted settings'</span>.</p>
-        <div class="step-img-container" onclick="openImageModal('step1.jpg')">
-          <img src="step1.jpg" alt="Allow Restricted Settings" class="step-img">
+        <div class="step-img-container" onclick="openImageModal('https://i.ibb.co/dw0NT3Q6/step1.jpg')">
+          <img src="https://i.ibb.co/dw0NT3Q6/step1.jpg" alt="Allow Restricted Settings" class="step-img">
         </div>
       </div>
 
-      <!-- Step 2 -->
       <div class="step-card">
         <div class="step-header">
           <span class="step-number">STEP 02</span>
         </div>
         <h3 class="step-title">Disable Pause App Activity</h3>
         <p class="step-text">Inside App Info, turn <span class="highlight">OFF</span> the <span class="highlight">'Pause app activity if unused'</span> toggle.</p>
-        <div class="step-img-container" onclick="openImageModal('step2.jpg')">
-          <img src="step2.jpg" alt="Disable Pause App Activity" class="step-img">
+        <div class="step-img-container" onclick="openImageModal('https://i.ibb.co/xqKVkLNs/step2.jpg')">
+          <img src="https://i.ibb.co/xqKVkLNs/step2.jpg" alt="Disable Pause App Activity" class="step-img">
         </div>
       </div>
 
-      <!-- Step 3 -->
       <div class="step-card">
         <div class="step-header">
           <span class="step-number">STEP 03</span>
         </div>
         <h3 class="step-title">Set Battery Usage to Unrestricted</h3>
         <p class="step-text">Go to <span class="highlight">'Battery'</span> ➔ Select <span class="highlight">'Unrestricted'</span> option.</p>
-        <div class="step-img-container" onclick="openImageModal('step3.jpg')">
-          <img src="step3.jpg" alt="Battery Unrestricted" class="step-img">
+        <div class="step-img-container" onclick="openImageModal('https://i.ibb.co/rKD3kx0L/step3.jpg')">
+          <img src="https://i.ibb.co/rKD3kx0L/step3.jpg" alt="Battery Unrestricted" class="step-img">
         </div>
       </div>
 
-      <!-- Step 4 -->
       <div class="step-card">
         <div class="step-header">
           <span class="step-number">STEP 04</span>
         </div>
         <h3 class="step-title">Open Downloaded Apps</h3>
         <p class="step-text">Tap Accessibility settings ➔ Click on <span class="highlight">'Downloaded apps'</span>.</p>
-        <div class="step-img-container" onclick="openImageModal('step4.jpg')">
-          <img src="step4.jpg" alt="Downloaded Apps" class="step-img">
+        <div class="step-img-container" onclick="openImageModal('https://i.ibb.co/2Y7wFj9J/step4.jpg')">
+          <img src="https://i.ibb.co/2Y7wFj9J/step4.jpg" alt="Downloaded Apps" class="step-img">
         </div>
       </div>
 
-      <!-- Step 5 -->
       <div class="step-card">
         <div class="step-header">
           <span class="step-number">STEP 05</span>
         </div>
         <h3 class="step-title">Select Sleep Guard</h3>
         <p class="step-text">Inside Downloaded Apps menu ➔ Find and click on <span class="highlight">'Sleep Guard'</span>.</p>
-        <div class="step-img-container" onclick="openImageModal('step5.jpg')">
-          <img src="step5.jpg" alt="Select Sleep Guard" class="step-img">
+        <div class="step-img-container" onclick="openImageModal('https://i.ibb.co/RGVrcgz9/step5.jpg')">
+          <img src="https://i.ibb.co/RGVrcgz9/step5.jpg" alt="Select Sleep Guard" class="step-img">
         </div>
       </div>
 
-      <!-- Step 6 -->
       <div class="step-card">
         <div class="step-header">
           <span class="step-number">STEP 06</span>
         </div>
         <h3 class="step-title">Enable Use Sleep Guard</h3>
         <p class="step-text">Turn <span class="highlight">ON</span> the <span class="highlight">'Use Sleep Guard'</span> toggle button.</p>
-        <div class="step-img-container" onclick="openImageModal('step6.jpg')">
-          <img src="step6.jpg" alt="Enable Use Sleep Guard" class="step-img">
+        <div class="step-img-container" onclick="openImageModal('https://i.ibb.co/WNNdMcr6/step6.jpg')">
+          <img src="https://i.ibb.co/WNNdMcr6/step6.jpg" alt="Enable Use Sleep Guard" class="step-img">
         </div>
       </div>
 
-      <!-- Step 7 -->
       <div class="step-card">
         <div class="step-header">
           <span class="step-number">STEP 07</span>
         </div>
         <h3 class="step-title">Fix "Not Working" Issue</h3>
         <p class="step-text">If it shows <span class="highlight">'Not working'</span>, turn <span class="highlight">OFF</span> the toggle ➔ Turn it <span class="highlight">ON</span> again.</p>
-        <div class="step-img-container" onclick="openImageModal('step7.jpg')">
-          <img src="step7.jpg" alt="Fix Not Working Status" class="step-img">
+        <div class="step-img-container" onclick="openImageModal('https://i.ibb.co/mFRdfVX0/step7.jpg')">
+          <img src="https://i.ibb.co/mFRdfVX0/step7.jpg" alt="Fix Not Working Status" class="step-img">
         </div>
       </div>
 
     </div>
   </main>
 
-  <!-- Fullscreen Modal View -->
+  <!-- Modal for Fullscreen Image View -->
   <div class="modal-overlay" id="mediaModal" onclick="closeModal()">
     <button class="close-modal">&times;</button>
     <div class="modal-content" onclick="event.stopPropagation()">
-      <img src="" id="modalImg" class="modal-img" alt="Fullscreen View" style="display:none;">
-      <video id="modalVideo" class="modal-video" controls style="display:none;"></video>
+      <img src="" id="modalImg" class="modal-img" alt="Fullscreen View">
     </div>
   </div>
 
-  <!-- Footer with Credit -->
   <footer>
     &copy; 2026 Sleep Guard Official. All rights reserved.<br>
     Developed by <strong>Rajani Saikia</strong>
@@ -695,36 +637,13 @@
     function openImageModal(imageSrc) {
       const modal = document.getElementById('mediaModal');
       const modalImg = document.getElementById('modalImg');
-      const modalVideo = document.getElementById('modalVideo');
-      
-      modalVideo.pause();
-      modalVideo.style.display = 'none';
       
       modalImg.src = imageSrc;
-      modalImg.style.display = 'block';
-      
-      modal.classList.add('active');
-    }
-
-    function openVideoModal(videoSrc) {
-      const modal = document.getElementById('mediaModal');
-      const modalImg = document.getElementById('modalImg');
-      const modalVideo = document.getElementById('modalVideo');
-      
-      modalImg.style.display = 'none';
-      
-      modalVideo.src = videoSrc;
-      modalVideo.style.display = 'block';
-      modalVideo.play();
-      
       modal.classList.add('active');
     }
 
     function closeModal() {
       const modal = document.getElementById('mediaModal');
-      const modalVideo = document.getElementById('modalVideo');
-      
-      modalVideo.pause();
       modal.classList.remove('active');
     }
   </script>
